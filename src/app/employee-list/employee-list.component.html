@@ -1,0 +1,26 @@
+<div id ="frm">
+    <table class = "table table-striped">
+        <thead>
+            <tr>
+                <th> Patient Name</th>
+                <th> Doctor Name </th>
+                <th> emailId </th>
+                <th> Amount </th>
+                <th> Actions </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let employee of employees" >
+                <td> {{ employee.firstName }} </td>
+                <td> {{ employee.lastName }} </td>
+                <td> {{ employee.emailId }} </td>
+                <td>{{employee.salary}}</td>
+                <td>
+                    <button (click)="updateEmployee(employee.id)" class="btn btn-info"> Update</button>
+                    <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                    <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

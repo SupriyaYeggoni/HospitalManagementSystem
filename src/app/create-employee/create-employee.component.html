@@ -1,0 +1,38 @@
+<div id ="frm">
+    <div class="col-md-6 offset-md-3">
+    
+        <form (ngSubmit) = "onSubmit()">
+            <div id="f">
+        
+                <div class="form-group">
+                    <label> Patient Name</label>
+                    <input type="text" class ="form-control" id = "firstName"
+                        [(ngModel)] = "employee.firstName" name="firstName" >
+                </div>
+            
+                <div class="form-group">
+                    <label> Doctor Name</label>
+                    <input type="text" class ="form-control" id = "lastName"
+                        [(ngModel)] = "employee.lastName" name = "lastName">
+                </div>
+            
+                <div class="form-group">
+                    <label> emailId</label>
+                    <input type="text" class ="form-control" id = "emailId"
+                        [(ngModel)] = "employee.emailId" name = "emailId">
+                </div>
+
+                <div class="form-group">
+                    <label> Amount</label>
+                    <input type="text" class ="form-control" id = "salary"
+                        [(ngModel)] = "employee.salary" name = "salary">
+                </div>
+                <br>
+                <div>
+                    <button class = "btn btn-success" type ="submit">Add Patient Details</button>
+                </div>
+           </div> 
+        
+        </form>
+    </div>
+</div>
